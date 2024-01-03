@@ -1,0 +1,13 @@
+{
+	"name": "challenge-pigmalion",
+	"version": "1.0.0",
+	"description": "",
+	"main": "script.js",
+	"scripts": {
+		"start": "dist/node script",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Andres Fernandez",
+	"license": "ISC"
+}
