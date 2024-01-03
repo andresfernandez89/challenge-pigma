@@ -1,16 +1,19 @@
 {
-	"name": "challenge-pigmalion",
-	"version": "1.0.0",
-	"description": "",
-	"main": "script.js",
-	"scripts": {
-		"start": "dist/node script",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "Andres Fernandez",
-	"license": "ISC",
-	"devDependencies": {
-		"prettier": "3.1.1"
-	}
+  "name": "challenge-pigmalion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "node dist/script",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andres Fernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "prettier": "3.1.1",
+    "typescript": "^5.3.3"
+  }
 }
