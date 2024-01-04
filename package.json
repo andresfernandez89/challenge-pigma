@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node dist/script",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "Andres Fernandez",
