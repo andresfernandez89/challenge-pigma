@@ -1,8 +1,14 @@
 import { sum, sumOptimized } from "../../script.js";
+
+// Mide el uso de la memoria, en este caso al ejecutar la funcion sum y sumOptimized.
+// Nos permite comparar el impacto en el uso de la memoria entre las dos funciones.
+// Retorna la informacion en la consola.
+
 export function measureMemoryUsage(callback: () => void): void {
   const startMemoryUsage = process.memoryUsage();
   callback();
   const endMemoryUsage = process.memoryUsage();
+  // Calcula la diferencia en el uso de la memoria, entre antes de la ejecucion de la funcion y despues.
   const memoryDiff = {
     rss: endMemoryUsage.rss - startMemoryUsage.rss,
     heapTotal: endMemoryUsage.heapTotal - startMemoryUsage.heapTotal,
@@ -10,6 +16,7 @@ export function measureMemoryUsage(callback: () => void): void {
   };
   console.log("Memory Usage Diff:", memoryDiff);
 }
+
 
 console.log("sum function");
 measureMemoryUsage(() => {
