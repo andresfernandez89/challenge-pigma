@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "script.js",
+  "type": "module",
   "scripts": {
     "start": "node dist/script",
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest --watchAll",
+    "performance-memoryUsage": "node dist/test/performance/measureMemoryUsage",
+    "performance-executionTime": "node dist/test/performance/measureExecutionTime"
   },
   "keywords": [],
   "author": "Andres Fernandez",
