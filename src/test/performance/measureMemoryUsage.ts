@@ -1,15 +1,17 @@
 import { sum, sumOptimized } from "../../script.js";
 
+const nums = [1, 2, 4, 4];
+const requiredSum = 8;
 // Mide el uso de la memoria al ejecutar una funcion.
 // Nos permite comparar el impacto en el uso de la memoria de una funcion.
-// Retorna un objeto en la consola con 3 propiedades:
-//  - rss (cantidad de memoria asignada al proceso).
-//  - heapTotal (cantidad de memoria asignada al heap, donde se almacenan los objetos de javascript).
-//  - heapUsed (la cantidad de memoria actualmente en uso en el heap).
+// Retorna la propiedad heapUsed (la cantidad de memoria actualmente en uso en el heap).
 
-export function measureMemoryUsage(callback: () => void): void {
+export function measureMemoryUsage(
+  fn: (nums: number[], requiredSum: number) => void,
+  name: string,
+): void {
   const startMemoryUsage = process.memoryUsage();
-  callback();
+  fn(nums, requiredSum);
   const endMemoryUsage = process.memoryUsage();
   // Calcula la diferencia en el uso de la memoria, entre antes de la ejecucion de la funcion y despues.
   const memoryDiff = {
@@ -17,18 +19,9 @@ export function measureMemoryUsage(callback: () => void): void {
     heapTotal: endMemoryUsage.heapTotal - startMemoryUsage.heapTotal,
     heapUsed: endMemoryUsage.heapUsed - startMemoryUsage.heapUsed,
   };
-  console.log("Memory Usage Diff:", memoryDiff);
+  console.log(`${name} memory usage (heapUsed):, ${memoryDiff.heapUsed}`);
   return;
 }
 
-console.log("sum function");
-measureMemoryUsage(() => {
-  sum([1, 2, 4, 4], 8);
-});
-
-console.log("--------------------------------------------------------------");
-
-console.log("sumOptimized function");
-measureMemoryUsage(() => {
-  sumOptimized([1, 2, 4, 4], 8);
-});
+measureMemoryUsage(sum, "sum function");
+measureMemoryUsage(sumOptimized, "sumOptimized function");
