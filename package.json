@@ -9,7 +9,8 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "test-performance": "node dist/test/performance/measureMemoryUsage"
+    "performance-memory": "node dist/test/performance/measureMemoryUsage",
+    "performance-time": "node dist/test/performance/measureExecutionTime"
   },
   "keywords": [],
   "author": "Andres Fernandez",
