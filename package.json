@@ -10,7 +10,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "performance-memoryUsage": "node dist/test/performance/measureMemoryUsage",
-    "performance-ExecutionTime": "node dist/test/performance/measureExecutionTime"
+    "performance-executionTime": "node dist/test/performance/measureExecutionTime"
   },
   "keywords": [],
   "author": "Andres Fernandez",
