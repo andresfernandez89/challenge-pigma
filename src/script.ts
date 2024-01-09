@@ -1,4 +1,5 @@
 // Algorithm 1.
+// Complexity: O(n^2)
 // This function checks if there are two elements in the 'nums' array whose sum equals 'requiredSum'.
 export function sum(nums: number[], requiredSum: number): boolean {
   // If the array 'nums' is empty, an error is thrown.
