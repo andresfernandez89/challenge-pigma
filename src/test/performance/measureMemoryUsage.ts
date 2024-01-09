@@ -2,9 +2,9 @@ import { sum, sumOptimized } from "../../script.js";
 
 const nums = [1, 2, 4, 4];
 const requiredSum = 8;
-// Mide el uso de la memoria al ejecutar una funcion.
-// Nos permite comparar el impacto en el uso de la memoria de una funcion.
-// Retorna la propiedad heapUsed (la cantidad de memoria actualmente en uso en el heap).
+// Measure the memory usage when executing a function.
+// Compare the impact on memory usage of a function.
+// Returns the heapUsed property (the amount of memory currently in use in the heap).
 
 export function measureMemoryUsage(
   fn: (nums: number[], requiredSum: number) => void,
@@ -13,7 +13,7 @@ export function measureMemoryUsage(
   const startMemoryUsage = process.memoryUsage();
   fn(nums, requiredSum);
   const endMemoryUsage = process.memoryUsage();
-  // Calcula la diferencia en el uso de la memoria, entre antes de la ejecucion de la funcion y despues.
+  // Calculates the difference in memory usage between before and after the execution of the function.
   const memoryDiff = {
     rss: endMemoryUsage.rss - startMemoryUsage.rss,
     heapTotal: endMemoryUsage.heapTotal - startMemoryUsage.heapTotal,
