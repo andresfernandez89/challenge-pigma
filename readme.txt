@@ -1,4 +1,6 @@
-PIGMALION CHALLENGE
+# PIGMALION CHALLENGE
+
+Trainee Technical Exam
 
 ## Tech Stack
 
@@ -35,7 +37,7 @@ Start the server
   npm run start
 ```
 
-Start the test
+Start the all tests
 
 ```bash
   npm run test
